@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-
+post '/send-email' => 'email#send_email'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
