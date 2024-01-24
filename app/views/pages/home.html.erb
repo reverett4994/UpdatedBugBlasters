@@ -1,0 +1,162 @@
+<head>
+  <meta name="description" content="Bug Blasters Inc provides pest control for interior and exterior locations across New Jersey and our Exterminators provide wonderful customer service">
+</head>
+<% if flash[:notice]%>
+  <div id="notice"><p><%= flash[:notice] %></p></div>
+<%end%>
+<% if false%>
+  <img src="/new_logo.jpg" class="home_icon" alt="Bug Blasters Inc. logo">
+<%end%>
+<div class="home_icon"></div>
+
+<div class="banner">
+  <h1>Protecting health and home since 1985 with personalized pest control</h1>
+    <ul>
+      <li>Female owned and operated.</li>
+      <li>Three generations of experience at your service.</li>
+      <li>You can trust our team of professionals with all your pest control needs.</li>
+    </ul>
+    <img src="/bug.png" class="bug_icon">
+
+    <h2>Need quick and efficient service? You dont have to wait! Call 609-298-8778</h2>
+
+
+</div>
+<div id="home_pics_container">
+  <div class="home_pics">
+    <%= link_to("/interior") do %>
+      <img src="/termite.jpg" alt="termites">
+      <span class="text-content"><span>Interior Pest Control</span></span>
+    <% end %>
+  </div>
+
+  <div class="home_pics">
+    <%= link_to("/exterior") do %>
+      <img src="/bees.jpeg" alt="bees">
+      <span class="text-content"><span>Exterior Pest Control</span></span>
+    <% end %>
+  </div>
+
+  <div style='clear:both'></div>
+
+  <div class="home_pics">
+    <%= link_to("/commercial") do %>
+      <img src="/com.jpg" alt="cockroach">
+      <span class="text-content"><span>Commercial Pest Control</span></span>
+    <% end %>
+  </div>
+
+  <div class="home_pics">
+    <%= link_to("/contact") do %>
+      <img src="/map.png" alt="map and directions">
+      <span class="text-content"><span>Locate and Contact Us!</span></span>
+    <% end %>
+  </div>
+
+</div>
+
+<br>
+<div class="grey banner">
+  <h1>Pest Control</h1>
+  <div class="p_container">
+    <p>
+      With over 25 years of experience, Bug Blasters Inc provides quality residential and commercial pest control services to Central New Jersey and surrounding areas!
+       It is our goal to perform each service with the utmost professionalism and to exceed the needs of each customer. Our technicians are highly trained, skilled,
+       insured, and licensed in New Jersey and Pennsylvania.<br>
+    </p>
+    <p>
+      We specialize in pest control and wildlife removal. We carefully eradicate insects, rodents and other pests with specialized techniques that are mindful of
+      humans and pets! Our services include treatment of residential and commercial properties.
+      We offer Realtors and Homeowners timely Wood Destroying Insect Inspections needed at the closing table. Inspections are conducted by Certified Wood Destroying
+      Insect Inspectors.
+     </p>
+    </div>
+   <h2>Our treatments include difficult to manage pests such as termites</h2>
+   <ul>
+     <li>termites</li>
+     <li>bed bugs</li>
+     <li>fleas</li>
+     <li>ants</li>
+     <li>mosquitoes</li>
+     <li>spiders</li>
+     <li>roaches</li>
+   </ul>
+   <ul>
+     <li>stink bugs</li>
+     <li>boxelder bugs</li>
+     <li>bagworms</li>
+     <li>tent worms</li>
+     <li> power washing and gutter cleaning (often required before removing carpenter bees)</li>
+     <li>and more!</li>
+   </ul>
+</div>
+<div class="banner map_banner">
+  <h1>Location</h1>
+
+  <iframe
+    src="https://www.google.com/maps/embed/v1/place?q=%20Bordentown%2C%20NJ%2C%20United%20States&key=AIzaSyAP1F7L3kTaS0ry33Vmf7cXO9hWfZADXYU" allowfullscreen>
+  </iframe>
+  <div id="map_info">
+    <h2>Located at</h2>
+    <p>Bordentown, NJ 08505</p>
+    <h2>Phone</h2>
+    <p>(609) 298-8778</p>
+    <h2>Hours</h2>
+    <p>Monday thur Friday 9AM-5PM</p>
+  </div>
+  <div id="map_info">
+    <h2>Providing rodent and pest control in</h2>
+    <p id="locations">
+    Bordentown, NJ<br>
+    Burlington County, NJ<br>
+    Bordentown Township, NJ<br>
+    Fieldsboro, NJ<br>
+    Chesterfield Township, NJ<br>
+    Hamilton Township, NJ<br>
+    Mansfield, NJ<br>
+    Robbinsville, NJ<br>
+    Allentown, NJ<br>
+    Upper Freehold, NJ<br>
+    North Hanover Township, NJ<br>
+    Springfield, NJ<br>
+    Burlington, NJ<br>
+    Burlington Township, NJ<br>
+    </p>
+
+  </div>
+</div>
+<br>
+
+<div class="white banner">
+  <h1>Exterminators</h1>
+  <div class="p_container">
+    <p>
+It is easy for a small pest infestation to turn into a major problem. Whether you are dealing with seasonal insect populations or environmental pests, insects
+and rodents can cause major disruptions to your life. Not only are these bugs and critters a nuisance, they also pose health and safety risks to your family and
+pets. Eliminate the problem before it gets out of hand with Bug Blasters, Inc. For nearly 30 years, we have been providing pest control service in Central
+New Jersey. Using our safe and effective methods, we can control, eliminate and prevent infestations, leaving you and your family with the peace of mind that
+comes with knowing your home is secure and free of pests.<br>
+    </p>
+    <p>
+      Where other exterminators have failed, we are there to pick up the slack. Our experts specialize in eliminating difficult pests and offering intense
+      treatments to control any type of insect or rodent population, from beg bugs to fleas to mice. If your home is under attack from wood damaging insects
+      like termites or carpenter bees, give us a call, we have Certified Wood Destroying Insect Inspectors on staff. Our technicians are highly trained to
+      handle the robust treatments these pests require.
+     </p>
+    </div>
+    <div id="white_list">
+      We provide outstanding extermination services to eliminate and prevent infestations.<br>
+      We use effective and safe treatment methods.<br>
+      We serve both residential and commercial customers.<br>
+      We are a member of the National Pest Management Association.<br>
+      We offer competitive prices and quick service.<br>
+    </div>
+
+</div>
+<div class="banner members">
+  <h1>We're members of...<h1>
+  <img src="/member2.jpg" class="member_icon" alt="New Jersey Pest Management Association">
+  <img src="/member1.png" class="member_icon" alt="National Pest Management Association">
+  <img src="/member3.png" class="member_icon" alt="Wood Destroying Credentialed Inspector">
+  <img src="/member4.jpg" class="member_icon" alt="Termidor Certified Professional">
+</div>

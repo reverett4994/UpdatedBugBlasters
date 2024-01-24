@@ -83,3 +83,11 @@ gem 'rails_12factor', group: :production
 gem 'leaflet-sidebar-rails'
 
 gem "font-awesome-rails"
+
+gem 'sass-rails', '~> 5.0'
+
+gem 'jquery-rails'
+
+gem 'turbolinks'
+
+gem 'coffee-rails'

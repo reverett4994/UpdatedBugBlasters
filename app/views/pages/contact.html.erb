@@ -1,0 +1,97 @@
+<head>
+  <meta name="description" content="Find and Locate Bug Blasters Inc in New Jersey and contact us through phone or email!">
+</head>
+<% @title = "Locate and Contact Bug Blasters Inc New Jersey" %>
+<div id="contact_wrapper">
+  <h1>Locate and Contact Us!</h1>
+  <div id="map"></div>
+  <div id="contact_info">
+    <h2>Business Hours</h2>
+    <p>
+      Monday: 9:00AM - 5:00PM<br>
+      Tuesday: 9:00AM - 5:00PM<br>
+      Wednesday: 9:00AM - 5:00PM<br>
+      Thursday: 9:00AM - 5:00PM<br>
+      Friday: 9:00AM - 5:00PM
+    </p>
+    <h2>Phone</h2>
+    <p>(609) 298-8778</p>
+  </div>
+</div>
+<div id="contact_wrapper_2">
+  <h1>Send us an email</h1>
+  <form action="/send-email"  method="post" id="registration-form">
+    <p>
+      Your Email*<br>
+      <input name="email" data-validation="email" placeholder="Your Email">
+    </p><br>
+
+    <p>
+      Message for us (<span id="pres-max-length">1000</span> characters left)<br>
+      <textarea placeholder="type away!" name="message" id="message"></textarea>
+    </p>
+    <br>
+    <p>
+      <input value="Send Message" type="submit">
+    </p>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+ $('#message').restrictLength( $('#pres-max-length') );
+
+$.validate({
+  lang: 'en',
+  modules : 'security',
+  onSuccess : function($form) {
+
+  },
+  onError : function($form) {
+    sweetAlert("Opps!", "Something Was Wrong", "warning");
+    return false; // IF FALSE Will stop the submission of the form
+  }
+});
+
+
+
+  function initMap(latitude=40.217,longitude=-74.742,message="") {
+
+    var uluru = {lat: latitude, lng: longitude};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 9,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
+
+
+
+  var contentString = message;
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+   marker.addListener('click', function() {
+     infowindow.open(map, marker);
+   });
+   $("#showing").text("Showing Latitude "+latitude+" and Logitude "+longitude)
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWLvPvhBVTQDyp3_QsZoc1AbvCPAD1C4k&callback=initMap"></script>

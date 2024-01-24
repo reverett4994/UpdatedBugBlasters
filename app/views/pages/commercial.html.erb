@@ -1,0 +1,86 @@
+<head>
+  <meta name="description" content="Bug Blasters Inc offers services for commercial bussiness around New Jersey such as inspections, rodent and pest control and more.">
+</head>
+<% @title = "Commercial Pest Control For New Jersey Bug Blasters Inc" %>
+<div id="com_wrapper">
+<div class="com_pic_odd com1 com_pic com_pic_color"></div>
+<div class="com_pic_even com2 com_pic com_pic_color"></div>
+<div class="com_pic_odd com3 com_pic com_pic_color"></div>
+<div class="com_pic_even com4 com_pic com_pic_color"></div>
+<br>
+<p>Inspections</p>
+<p>Insect Exterminations</p>
+<p>Rodent Control</p>
+<p>Pest Management</p>
+</div>
+<div id="temp_com_banner">Commercial Pest<br> Control</div></div>
+<div id="com_text">
+  <div class="text1">
+    <h1>Inspections</h1>
+    <p> When you run a commercial business, it is important that your property be free of insects and rodents. These pests can be a nuisance,
+        as well as pose health and safety risks to your customers and employees. With Bug Blasters, Inc., we will perform thorough and routine
+        inspections to be sure your premises are free of pests</p>
+  </div>
+  <div class="text2">
+    <h1>Insect Exterminations</h1>
+    <p> It does not take long for a small insect infestation to get out of control. Whether you are struggling with ants, roaches or
+      even termites, we can help. We offer comprehensive insect control, including termite extermination. Don’t let these pests cause
+      problems for your commercial building. Our professionals can eliminate and prevent insect infestations</p>
+  </div>
+  <div class="text3">
+    <h1>Rodent Control</h1>
+    <p>While a rodent infestation can be a nuisance at home, when you have one at your business, it can be a huge problem. It is dangerous
+      and often illegal to set traps and leave poison out, our experts will use save and effect of methods to eliminate the problem without
+       disrupting your business. Our experts will use safe and effective trapping methods to eliminate the problem without disrupting your
+       work</p>
+  </div>
+  <div class="text4">
+    <h1>Pest Management</h1>
+    <p> If you would like to stay on top of your pest management, consider hiring us for routine commercial pest control. We can schedule
+        regular visits to inspect and prevent infestations. Don’t wait until you have a problem to call for pest control for your business.
+        Invest in a prevention program to save money and prevent problems from arising</p>
+  </div>
+</div>
+
+
+
+<script>
+
+$(".com_pic").hover(function(){
+  $(".com_pic").each(function(){
+    $(this).addClass("com_pic_grey");
+    $(this).removeClass("com_pic_color");
+  });
+  $(this).removeClass("com_pic_grey");
+  $(this).addClass("com_pic_color");
+}, function(){
+  $(".com_pic").each(function(){
+    $(this).removeClass("com_pic_grey");
+    $(this).addClass("com_pic_color");
+  });
+});
+
+$(".com1").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".text1").offset().top
+    }, 1500);
+});
+
+$(".com2").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".text2").offset().top
+    }, 1500);
+});
+
+$(".com3").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".text3").offset().top
+    }, 1500);
+});
+
+$(".com4").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".text4").offset().top
+    }, 1500);
+});
+</script>

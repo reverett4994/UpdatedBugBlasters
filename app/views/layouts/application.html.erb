@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Testbug</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title><%= @title||= "Bug Blasters Inc Pest Control and Extermination for New Jersey" %></title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:medium" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js"></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="header_logo.ico" />
+  <%= render partial: "layouts/google_analytics" %>
+</head>
+<body>
+<div id="header">
+  <div id="left_header">
+    <%= link_to("/") do %>
+      <img src="/header_logo.png" class="header_logo" alt="Bug Blasters Inc New Jersey logo">
+    <% end %>
+  </div>
+  <ul>
+    <li><a href="/interior">Interior Pest Control</a></li>
+    <li><a href="/exterior">Exterior Pest Control</a></li>
+    <li><a href="/commercial">Commercial Pest Control</a></li>
+    <div class="dropdown_div">
+      <li class='dropdown_link'><a href="#" onclick="return false;">Prep Sheets</a></li>
+      <div class="dropdown_content">
+        <li><a href="/bedbug.pdf">Bedbug</a></li>
+        <li><a href="/bedbug_esp.pdf">Bedbug (español)</a></li>
+        <li><a href="/roach.pdf">Roach</a></li>
+      </div>
+    </div>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</div>
+<%= yield %>
+<div id="footer">
+  <h1>Find us here!</h1><hr class="style18">
+  <div id="SM_footer">
+    <div class="SM_icon_wrapper">
+       <a href="https://www.facebook.com/pages/Bug-Blasters-Inc/625034294286328?sk=timeline"><img src="/facebook.png" class="SM_icon invert" alt="Facebook icon"></a>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+    </div>
+    <div class="SM_icon_wrapper">
+       <a href="https://plus.google.com/102481671134854625281/about"><img src="/google-plus.png" class="SM_icon invert" alt="Google Plus icon"></a>
+    </div>
+    <div class="SM_icon_wrapper">
+        <a href="http://www.bing.com/local/details.aspx?lid=YN587x10139746"><img src="/bing.png" class="SM_icon invert" alt="Bing icon"></a>
+    </div>
+    <div class="SM_icon_wrapper">
+      <a href="https://local.yahoo.com/details;_ylt=AwrSyCSEGO5TV1kADrLumYlQ;_ylu=X3oDMTBtbTlna3Y0BGNvbG8DZ3ExBHZ0aWQDBHQxcG9zAzE-?id=10941549&stx=&csz=Bordentown+NJ"><img src="/yahoo-logo.png" class="SM_icon invert" alt="Yahoo icon"></a>
+    </div>
+      <a href="http://www.yellowpages.com/bordentown-nj/mip/bug-blasters-inc-1478991"><img src="/yellow.png" class="SM_icon" alt="Yellow Pages icon"></a>
+    <div class="SM_icon_wrapper">
 
-  <body>
-    <%= yield %>
-  </body>
+      <a href="https://www.yelp.com/biz/bug-blasters-inc-bordentown"><img src="/yelp-logo.png" class="SM_icon invert" alt="Yelp icon"></a>
+    </div>
+  </div>
+  <p>Copyright (c) 2017 Bug Blasters, Inc. - Bordentown, NJ 08505 - (609) 298-8778</p>
+
+</div>
+<%= render partial: "layouts/google_analytics_pageview" %>
+
+</body>
 </html>
+<script type="text/javascript">
+
+$('.dropdown_div').on({ 'touchstart' : function(){
+  $("#header").css('min-height', 430, 'important');
+  $("#header").css('max-height', 430, 'important');
+  $(".dropdown_content").css('display', 'block', 'important');
+}
+});
+
+$(".dropdown_div").hover(function(){
+  if ($(window).width() < 1120) {
+    if ($('#header').height() != 430) {
+      $("#header").css('min-height', 420);
+      $("#header").css('max-height', 420);
+    }
+  }
+    }, function(){
+      if ($(window).width() < 1120) {
+        if ($('#header').height() == 430) {
+          $("#header").css('min-height', 430, 'important');
+          $("#header").css('max-height', 430, 'important');
+        } else {
+          if ($('#header').height() != 430) {
+            $("#header").css('min-height', 310);
+            $("#header").css('max-height', 310);
+          }
+        }
+      }
+});
+
+
+
+
+
+</script>
