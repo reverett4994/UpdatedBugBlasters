@@ -69,3 +69,17 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# ported from old site
+
+gem 'high_voltage', '~> 3.0.0'
+
+gem 'sweetalert-rails'
+
+
+
+gem 'rails_12factor', group: :production
+
+gem 'leaflet-sidebar-rails'
+
+gem "font-awesome-rails"
